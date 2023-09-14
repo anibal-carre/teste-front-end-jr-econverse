@@ -1,14 +1,17 @@
 import React from "react";
 import "./Home.scss";
-import TopBar from "../TopBar/TopBar";
+import Header from "../Header/Header";
+import Banner from "../Banner/Banner";
+import ProductType from "../ProductType/ProductType";
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = () => {
   return (
     <div className="home-container">
-      <TopBar />
-      <h1>Home</h1>
+      <Header />
+      <Banner />
+      <ProductType />
     </div>
   );
 };

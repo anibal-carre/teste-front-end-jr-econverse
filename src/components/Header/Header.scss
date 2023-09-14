@@ -1,0 +1,14 @@
+@import '../../App.scss';
+
+.header-container {
+    width: 1280px;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    background-color: $divider-color;
+}

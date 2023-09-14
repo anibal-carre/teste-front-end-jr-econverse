@@ -1,0 +1,51 @@
+@import "../../App.scss";
+
+.banner-container {
+  width: 1443px;
+  height: 395px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("src/assets/images/Rectangle 250.png");
+  background-repeat: no-repeat;
+  padding: 60px 90px;
+}
+
+.banner-text-div {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  color: $white-100;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.banner-subtitle {
+  color: $white-100;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.banner-button {
+  width: 227px;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  background-color: $pink-app;
+  color: $white-100;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  font-style: normal;
+  margin: 20px 0 0;
+}

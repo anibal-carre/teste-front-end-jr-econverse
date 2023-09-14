@@ -1,23 +1,24 @@
 @import '../../App.scss';
 
 .topbar-container {
-    border: 1px solid black;
-    width: 100%;
+    width: 1280px;
     height: 32px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 80px;
 }
 
 .top-item {
-    width: 158px;
+    width: 220px;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     font-size: 12px;
     font-weight: 500;
     line-height: 18px;
     color: $gray-200;
-    border: 1px solid blue;
 }
 
 .item-pink-text {
