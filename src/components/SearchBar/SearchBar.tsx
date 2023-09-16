@@ -8,7 +8,7 @@ const SearchBar: React.FC<SearchBarProps> = () => {
     <nav className="search-container">
       <div className="search-item logo-div">
         <img
-          src="src/assets/icons/Group 405.svg"
+          src="../../assets/icons/Group 405.svg"
           alt="vtex-logo"
           height={"50px"}
         />
@@ -17,15 +17,15 @@ const SearchBar: React.FC<SearchBarProps> = () => {
         <input className="searchbar" type="text" />
         <img
           className="glass-icon"
-          src="src/assets/icons/MagnifyingGlass.svg"
+          src="../../assets/icons/MagnifyingGlass.svg"
           alt="glass-icon"
         />
       </div>
       <div className="search-item icons-div">
-        <img src="src/assets/icons/Group3.png" alt="group-icon" />
-        <img src="src/assets/icons/Heart2.png" alt="heart-icon" />
-        <img src="src/assets/icons/UserCircle2.png" alt="user-icon" />
-        <img src="src/assets/icons/ShoppingCart2.png" alt="cart-icon" />
+        <img src="../../assets/icons/Group3.png" alt="group-icon" />
+        <img src="../../assets/icons/Heart2.png" alt="heart-icon" />
+        <img src="../../assets/icons/UserCircle2.png" alt="user-icon" />
+        <img src="../../assets/icons/ShoppingCart2.png" alt="cart-icon" />
       </div>
     </nav>
   );

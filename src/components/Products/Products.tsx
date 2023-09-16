@@ -86,7 +86,7 @@ const Products: React.FC<ProductsProps> = () => {
       </header>
       <main className="products-section-main-container">
         <img
-          src="src/assets/icons/Vector1.png"
+          src="../../assets/icons/Vector1.png"
           alt="vector-icon"
           width={"20px"}
           height={"34px"}
@@ -103,7 +103,7 @@ const Products: React.FC<ProductsProps> = () => {
           <ProductCard />
         </div>
         <img
-          src="src/assets/icons/Vector2.png"
+          src="../../assets/icons/Vector2.png"
           alt="vector2-icon"
           width={"20px"}
           height={"34px"}

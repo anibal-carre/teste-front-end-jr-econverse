@@ -9,7 +9,7 @@ const TopBar: React.FC<TopBarProps> = () => {
       <div className="top-item">
         <img
           className="item-icon"
-          src="src/assets/icons/ShieldCheck.svg"
+          src="../../assets/icons/ShieldCheck.svg"
           alt="ShieldCheck"
         />
         <p className="item-text">
@@ -17,7 +17,7 @@ const TopBar: React.FC<TopBarProps> = () => {
         </p>
       </div>
       <div className="top-item">
-        <img className="item-icon" src="src/assets/icons/Truck.svg" alt="" />
+        <img className="item-icon" src="../../assets/icons/Truck.svg" alt="" />
         <p className="item-text">
           <span className="item-pink-text">Frete grátis</span> acima de R$ 200
         </p>
@@ -25,7 +25,7 @@ const TopBar: React.FC<TopBarProps> = () => {
       <div className="top-item">
         <img
           className="item-icon"
-          src="src/assets/icons/CreditCard.svg"
+          src="../../assets/icons/CreditCard.svg"
           alt=""
         />
         <p className="item-text">
