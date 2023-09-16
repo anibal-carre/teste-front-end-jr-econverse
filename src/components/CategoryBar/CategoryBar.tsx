@@ -1,5 +1,6 @@
 import React from "react";
 import "./CategoryBar.scss";
+import crown from "../../assets/icons/CrownSimple.svg";
 
 interface CategoryBarProps {}
 
@@ -26,7 +27,7 @@ const CategoryBar: React.FC<CategoryBarProps> = () => {
           <span className="category-text">Ofertas do dia</span>
         </li>
         <li className="category-item">
-          <img src="src/assets/icons/CrownSimple.svg" alt="crown-icon" />
+          <img src={crown} alt="crown-icon" />
           <span className="category-text">Assinatura</span>
         </li>
       </ul>
