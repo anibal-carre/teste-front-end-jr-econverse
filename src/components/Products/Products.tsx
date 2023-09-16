@@ -2,6 +2,8 @@ import React from "react";
 import "./Products.scss";
 import ProductCard from "../ProductCard/ProductCard";
 import { useState, useEffect, useRef } from "react";
+import verctor1 from "../../assets/icons/Vector1.png";
+import verctor2 from "../../assets/icons/Vector2.png";
 
 interface ProductsProps {}
 
@@ -86,7 +88,7 @@ const Products: React.FC<ProductsProps> = () => {
       </header>
       <main className="products-section-main-container">
         <img
-          src="../../assets/icons/Vector1.png"
+          src={verctor1}
           alt="vector-icon"
           width={"20px"}
           height={"34px"}
@@ -103,7 +105,7 @@ const Products: React.FC<ProductsProps> = () => {
           <ProductCard />
         </div>
         <img
-          src="../../assets/icons/Vector2.png"
+          src={verctor2}
           alt="vector2-icon"
           width={"20px"}
           height={"34px"}
