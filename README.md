@@ -11,10 +11,11 @@ Siga estas etapas para instalar e configurar o projeto em sua máquina local:
 1. Clone este repositório para o seu computador:
 
    ```bash
-   git clone https://github.com/seu-nome-de-usuario/nome-do-repositorio.git
+   git clone https://github.com/seu-nome-de-usuario/nome-do-repositorio.git](https://github.com/anibal-carre/teste-front-end-jr-econverse.git
 
 2.Navegue até o diretório do projeto:
 
+```bash
 cd nome-do-repositorio
 
 
