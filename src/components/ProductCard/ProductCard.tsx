@@ -6,11 +6,12 @@ interface ProductCardProps {
   descriptionShort: string;
   photo: string;
   price: number;
+  onClick: () => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = (props) => {
   return (
-    <article className="products-section-cards">
+    <article className="products-section-cards" onClick={props.onClick}>
       <img className="product-card-img" src={props.photo} alt="product-img" />
       <p className="product-card-description">{props.productName}</p>
       <span className="product-card-discount">

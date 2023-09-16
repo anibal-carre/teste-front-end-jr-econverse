@@ -1,0 +1,149 @@
+@import "../../App.scss";
+
+.product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: Lato;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 769px;
+  height: 299.257px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container {
+  display: flex;
+}
+.info-content {
+  width: 50%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-img {
+  width: 50%;
+  margin-top: 10px;
+}
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+}
+
+.modal-title {
+  color: #041e50;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.modal-price {
+  color: #041e50;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.modal-description {
+  color: #222;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150.5%;
+  letter-spacing: 0.5px;
+  align-self: flex-start;
+  margin-bottom: 15px;
+}
+
+.more {
+  color: #041e50;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.6px;
+  align-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.counter {
+  width: 110px;
+  height: 36px;
+  border-radius: 4px;
+  border: 1px solid #041e50;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.button-counter {
+  width: 20.308px;
+  height: 19.636px;
+  background-color: $white-100;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+.result {
+  color: #041e50;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.modal-button {
+  width: 245px;
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  background-color: $pink-app;
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}

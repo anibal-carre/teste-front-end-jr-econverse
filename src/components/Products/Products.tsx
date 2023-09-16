@@ -3,6 +3,7 @@ import "./Products.scss";
 import ProductCard from "../ProductCard/ProductCard";
 import verctor1 from "../../assets/icons/Vector1.png";
 import verctor2 from "../../assets/icons/Vector2.png";
+import ProductModal from "../ProductModal/ProductModal";
 
 interface ProductsProps {}
 
@@ -10,6 +11,13 @@ const Products: React.FC<ProductsProps> = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const [slideCounter, setSlideCounter] = useState(0);
   const [isInTransition, setIsInTransition] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleProductClick = (product: Product) => {
+    setIsModalOpen(true);
+    setSelectedProduct(product);
+  };
   const [productData, setProductData] = useState<{
     products: Product[];
   } | null>(null);
@@ -145,6 +153,7 @@ const Products: React.FC<ProductsProps> = () => {
                   productName={e.productName}
                   photo={e.photo}
                   descriptionShort={e.descriptionShort}
+                  onClick={() => handleProductClick(e)}
                 />
               ))}
             </div>
@@ -158,6 +167,13 @@ const Products: React.FC<ProductsProps> = () => {
           onClick={() => moveSlide(DIRECTION.RIGHT)}
         />
       </main>
+
+      {isModalOpen && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </section>
   );
 };
