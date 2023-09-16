@@ -21,6 +21,7 @@ cd nome-do-repositorio
 
 3.Instale as dependências do projeto usando o npm:
 
+```bash
 npm install
 
 
@@ -28,6 +29,7 @@ npm install
 
 Após a instalação das dependências, você pode executar o projeto localmente. Use o seguinte comando:
 
+```bash
 npm start
 
 //------------------------------------------------------------------------------------------------
