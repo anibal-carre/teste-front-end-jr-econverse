@@ -15,7 +15,6 @@ const Products: React.FC<ProductsProps> = () => {
   } | null>(null);
 
   interface Product {
-    id: number;
     productName: string;
     descriptionShort: string;
     photo: string;
@@ -145,7 +144,6 @@ const Products: React.FC<ProductsProps> = () => {
                   price={e.price}
                   productName={e.productName}
                   photo={e.photo}
-                  id={e.id}
                   descriptionShort={e.descriptionShort}
                 />
               ))}
