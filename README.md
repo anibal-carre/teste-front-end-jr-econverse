@@ -1,17 +1,31 @@
-# React + TypeScript + Vite
+Teste Front-end jr econverse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Pré-requisitos
 
-Currently, two official plugins are available:
+Antes de começar, certifique-se de ter o Node.js e o npm (Node Package Manager) instalados em sua máquina. Você pode baixá-los em [nodejs.org](https://nodejs.org/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalação
 
-## Expanding the ESLint configuration
+Siga estas etapas para instalar e configurar o projeto em sua máquina local:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone este repositório para o seu computador:
 
-- Configure the top-level `parserOptions` property like this:
+   ```bash
+   git clone https://github.com/seu-nome-de-usuario/nome-do-repositorio.git
+
+2.Navegue até o diretório do projeto:
+
+cd nome-do-repositorio
+
+3.Instale as dependências do projeto usando o npm:
+
+npm install
+
+#Rodando o Projeto
+
+Após a instalação das dependências, você pode executar o projeto localmente. Use o seguinte comando:
+
+npm start
 
 ```js
    parserOptions: {
