@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid greenyellow;
 }
 
 .products-section-header {
@@ -87,14 +86,18 @@
   justify-content: center;
   align-items: center;
   gap: 50px;
-  border: 1px solid black;
 }
 
 .products-section-main {
   width: 1266px;
   height: 500px;
   display: flex;
-  gap: 62px;
+  gap: 55px;
+  padding: 10px 10px;
   margin-top: 10px;
   overflow: hidden;
+}
+
+.vector {
+  cursor: pointer;
 }

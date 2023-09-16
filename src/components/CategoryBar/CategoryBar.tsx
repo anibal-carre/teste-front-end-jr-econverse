@@ -23,7 +23,7 @@ const CategoryBar: React.FC<CategoryBarProps> = () => {
         <li className="category-item">
           <span className="category-text">Lançamentos</span>
         </li>
-        <li className="category-item item-pink">
+        <li className="category-item category-item-pink">
           <span className="category-text">Ofertas do dia</span>
         </li>
         <li className="category-item">

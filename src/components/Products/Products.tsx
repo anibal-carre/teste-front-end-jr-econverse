@@ -11,6 +11,37 @@ const Products: React.FC<ProductsProps> = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const [slideCounter, setSlideCounter] = useState(0);
   const [isInTransition, setIsInTransition] = useState(false);
+  const [productData, setProductData] = useState<ProductData | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  interface ProductData {
+    id: number;
+    productName: string;
+    descriptionShort: string;
+    photo: string;
+    price: number;
+  }
+
+  useEffect(() => {
+    const apiUrl =
+      "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"; // Reemplaza esto con la URL de tu API
+    fetch(apiUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProductData(data);
+        console.log(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setIsLoading(false); // Asegúrate de cambiar isLoading a falso incluso en caso de error
+      });
+  }, []);
 
   const DIRECTION = {
     RIGHT: "RIGHT",
@@ -23,21 +54,7 @@ const Products: React.FC<ProductsProps> = () => {
     return transformValue;
   };
 
-  const reorderSlide = () => {
-    console.log("reorderSlide called");
-    const transformValue = getTransformValue();
-    setIsInTransition(false);
-    if (slideCounter === 0) {
-      sliderRef.current?.appendChild(sliderRef.current?.firstElementChild);
-      sliderRef.current?.scrollTo({
-        left: transformValue - sliderRef.current?.clientWidth,
-        behavior: "auto",
-      });
-    }
-  };
-
   const moveSlide = (direction: string) => {
-    console.log("moveSlide called with direction:", direction);
     if (isInTransition) return;
     setIsInTransition(true);
 
@@ -57,17 +74,42 @@ const Products: React.FC<ProductsProps> = () => {
       });
       setSlideCounter(slideCounter + 1);
     }
+
+    setTimeout(() => {
+      setIsInTransition(false);
+    }, 300); // Ajusta la duración de la animación según sea necesario
   };
 
   useEffect(() => {
     const sliderContainer = sliderRef.current;
     if (!sliderContainer) return;
 
-    sliderContainer.addEventListener("transitionend", reorderSlide);
+    const handleTransitionEnd = () => {
+      setIsInTransition(false);
+    };
+
+    sliderContainer.addEventListener("transitionend", handleTransitionEnd);
 
     return () => {
-      sliderContainer.removeEventListener("transitionend", reorderSlide);
+      sliderContainer.removeEventListener("transitionend", handleTransitionEnd);
     };
+  }, []);
+
+  useEffect(() => {
+    const productCards = sliderRef.current?.querySelectorAll(".product-card");
+    if (productCards && productCards.length > 1) {
+      const firstElement = sliderRef.current?.firstElementChild;
+      const lastElement = sliderRef.current?.lastElementChild;
+      if (firstElement && lastElement) {
+        const cloneFirst = firstElement.cloneNode(true) as HTMLElement;
+        const cloneLast = lastElement.cloneNode(true) as HTMLElement;
+        sliderRef.current?.appendChild(cloneFirst);
+        sliderRef.current?.insertBefore(
+          cloneLast,
+          sliderRef.current?.firstChild
+        );
+      }
+    }
   }, []);
   return (
     <section className="products-section-container">
@@ -88,6 +130,7 @@ const Products: React.FC<ProductsProps> = () => {
       </header>
       <main className="products-section-main-container">
         <img
+          className="vector"
           src={verctor1}
           alt="vector-icon"
           width={"20px"}
@@ -105,6 +148,7 @@ const Products: React.FC<ProductsProps> = () => {
           <ProductCard />
         </div>
         <img
+          className="vector"
           src={verctor2}
           alt="vector2-icon"
           width={"20px"}
