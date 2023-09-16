@@ -16,7 +16,11 @@ const SearchBar: React.FC<SearchBarProps> = () => {
         <img src={group40Icon} alt="vtex-logo" height={"50px"} />
       </div>
       <div className="search-item bar-div">
-        <input className="searchbar" type="text" />
+        <input
+          className="searchbar"
+          type="text"
+          placeholder="O que você está buscando?"
+        />
         <img className="glass-icon" src={glassIcon} alt="glass-icon" />
       </div>
       <div className="search-item icons-div">

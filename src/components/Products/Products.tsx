@@ -113,7 +113,7 @@ const Products: React.FC<ProductsProps> = () => {
       <header className="products-section-header">
         <div className="title-div">
           <div className="products-divider" />
-          <h2 className="products-title">Produtos ralacionados</h2>
+          <h2 className="products-title">Produtos relacionados</h2>
           <div className="products-divider" />
         </div>
         <nav className="products-section-nav">
