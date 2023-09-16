@@ -13,19 +13,19 @@ Siga estas etapas para instalar e configurar o projeto em sua máquina local:
    ```bash
    git clone https://github.com/seu-nome-de-usuario/nome-do-repositorio.git](https://github.com/anibal-carre/teste-front-end-jr-econverse.git
 
-##2.Navegue até o diretório do projeto:
+## 2.Navegue até o diretório do projeto:
 
 
 cd nome-do-repositorio
 
 
-##3.Instale as dependências do projeto usando o npm:
+## 3.Instale as dependências do projeto usando o npm:
 
 
 npm install
 
 
-#Rodando o Projeto
+## Rodando o Projeto
 
 Após a instalação das dependências, você pode executar o projeto localmente. Use o seguinte comando:
 
