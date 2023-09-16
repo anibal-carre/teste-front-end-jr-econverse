@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBar.scss";
+import shoppinCart from "../../assets/icons/ShoppingCart2.png";
 
 interface SearchBarProps {}
 
@@ -22,10 +23,10 @@ const SearchBar: React.FC<SearchBarProps> = () => {
         />
       </div>
       <div className="search-item icons-div">
-        <img src="../../assets/icons/Group3.png" alt="group-icon" />
-        <img src="../../assets/icons/Heart2.png" alt="heart-icon" />
-        <img src="../../assets/icons/UserCircle2.png" alt="user-icon" />
-        <img src="../../assets/icons/ShoppingCart2.png" alt="cart-icon" />
+        <img src="../assets/icons/Group3.png" alt="group-icon" />
+        <img src="../assets/icons/Heart2.png" alt="heart-icon" />
+        <img src="../assets/icons/UserCircle2.png" alt="user-icon" />
+        <img src={shoppinCart} alt="cart-icon" />
       </div>
     </nav>
   );
