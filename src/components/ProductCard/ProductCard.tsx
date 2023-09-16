@@ -1,22 +1,25 @@
 import React from "react";
 import "./ProductCard.scss";
 
-interface ProductCardProps {}
+interface ProductCardProps {
+  productName: string;
+  descriptionShort: string;
+  photo: string;
+  price: number;
+}
 
-const ProductCard: React.FC<ProductCardProps> = () => {
+const ProductCard: React.FC<ProductCardProps> = (props) => {
   return (
     <article className="products-section-cards">
-      <img
-        className="product-card-img"
-        src="https://app.econverse.com.br/teste-front-end/junior/tecnologia/fotos-produtos/foto-iphone.png"
-        alt=""
-      />
-      <p className="product-card-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </p>
-      <span className="product-card-discount">R$ 30,90</span>
-      <span className="product-card-price">R$ 28,90</span>
-      <span className="product-card-pricex">Ou 2x de R$ 40,05</span>
+      <img className="product-card-img" src={props.photo} alt="product-img" />
+      <p className="product-card-description">{props.productName}</p>
+      <span className="product-card-discount">
+        R$ {(props.price + props.price / 10).toFixed(2)}
+      </span>
+      <span className="product-card-price">R$ {props.price.toFixed(2)}</span>
+      <span className="product-card-pricex">
+        Ou 2x de R$ {(props.price / 2).toFixed(2)}
+      </span>
       <span className="product-card-free">Frete grátis</span>
       <button className="product-card-button">Comprar</button>
     </article>

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Products.scss";
 import ProductCard from "../ProductCard/ProductCard";
-import { useState, useEffect, useRef } from "react";
 import verctor1 from "../../assets/icons/Vector1.png";
 import verctor2 from "../../assets/icons/Vector2.png";
 
@@ -11,10 +10,11 @@ const Products: React.FC<ProductsProps> = () => {
   const sliderRef = useRef<HTMLDivElement | null>(null);
   const [slideCounter, setSlideCounter] = useState(0);
   const [isInTransition, setIsInTransition] = useState(false);
-  const [productData, setProductData] = useState<ProductData | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [productData, setProductData] = useState<{
+    products: Product[];
+  } | null>(null);
 
-  interface ProductData {
+  interface Product {
     id: number;
     productName: string;
     descriptionShort: string;
@@ -24,7 +24,7 @@ const Products: React.FC<ProductsProps> = () => {
 
   useEffect(() => {
     const apiUrl =
-      "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"; // Reemplaza esto con la URL de tu API
+      "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json";
     fetch(apiUrl)
       .then((response) => {
         if (!response.ok) {
@@ -34,12 +34,9 @@ const Products: React.FC<ProductsProps> = () => {
       })
       .then((data) => {
         setProductData(data);
-        console.log(data);
-        setIsLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        setIsLoading(false); // Asegúrate de cambiar isLoading a falso incluso en caso de error
       });
   }, []);
 
@@ -77,7 +74,7 @@ const Products: React.FC<ProductsProps> = () => {
 
     setTimeout(() => {
       setIsInTransition(false);
-    }, 300); // Ajusta la duración de la animación según sea necesario
+    }, 300);
   };
 
   useEffect(() => {
@@ -111,6 +108,7 @@ const Products: React.FC<ProductsProps> = () => {
       }
     }
   }, []);
+
   return (
     <section className="products-section-container">
       <header className="products-section-header">
@@ -137,16 +135,22 @@ const Products: React.FC<ProductsProps> = () => {
           height={"34px"}
           onClick={() => moveSlide(DIRECTION.LEFT)}
         />
-        <div className="products-section-main" ref={sliderRef}>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </div>
+        {productData &&
+          productData.products &&
+          Array.isArray(productData.products) && (
+            <div className="products-section-main" ref={sliderRef}>
+              {productData.products.map((e, i) => (
+                <ProductCard
+                  key={i}
+                  price={e.price}
+                  productName={e.productName}
+                  photo={e.photo}
+                  id={e.id}
+                  descriptionShort={e.descriptionShort}
+                />
+              ))}
+            </div>
+          )}
         <img
           className="vector"
           src={verctor2}
