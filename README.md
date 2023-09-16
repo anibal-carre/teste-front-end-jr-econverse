@@ -17,9 +17,11 @@ Siga estas etapas para instalar e configurar o projeto em sua máquina local:
 
 cd nome-do-repositorio
 
+
 3.Instale as dependências do projeto usando o npm:
 
 npm install
+
 
 #Rodando o Projeto
 
