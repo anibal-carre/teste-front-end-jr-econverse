@@ -7,7 +7,6 @@
   justify-content: center;
   gap: 50px;
   margin: 30px;
-  border: 1px solid black;
 }
 
 .type-div {
@@ -26,6 +25,7 @@
   background-color: $white-300;
   box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.13);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .card-type-white {
@@ -37,9 +37,12 @@
   background-color: $white-100;
   box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.22);
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .type-text {
+  width: 150px;
+  text-align: center;
   color: $gray-400;
   align-self: center;
   font-size: 16px;

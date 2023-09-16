@@ -1,0 +1,100 @@
+@import "../../App.scss";
+
+:root {
+  --slide-transform: 0;
+  --transition: transform 1s;
+}
+.products-section-container {
+  width: 1410px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid greenyellow;
+}
+
+.products-section-header {
+  width: 1266px;
+  height: 95px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-div {
+  display: flex;
+  gap: 25px;
+}
+
+.products-title {
+  color: $pink-app;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.products-divider {
+  width: 360px;
+  height: 1px;
+  margin: 14px 0 0;
+  background-color: $gray-50;
+}
+.products-section-nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.products-section-items {
+  width: 211px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 58px;
+  border: 1px solid $gray-100;
+  color: $gray-500;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.item-pink {
+  width: 211px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 58px;
+  border: 1px solid $gray-100;
+  color: $pink-app;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.products-section-main-container {
+  width: 100%;
+  height: 510px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid black;
+}
+
+.products-section-main {
+  width: 1266px;
+  height: 500px;
+  display: flex;
+  gap: 62px;
+  margin-top: 10px;
+  overflow: hidden;
+}

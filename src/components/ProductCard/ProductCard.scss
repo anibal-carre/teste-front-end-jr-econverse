@@ -1,0 +1,71 @@
+@import "../../App.scss";
+
+.products-section-cards {
+  width: 270px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 10px;
+  background: $white-100;
+  box-shadow: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
+}
+
+.product-card-img {
+  margin-top: 15px;
+}
+.product-card-description {
+  color: $black-400;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.product-card-discount {
+  color: $gray-300;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: line-through;
+  margin-top: 15px;
+}
+
+.product-card-price {
+  color: $black-400;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.product-card-pricex {
+  color: $black-400;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.product-card-free {
+  color: $pink-app;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 5px;
+}
+
+.product-card-button {
+  width: 245px;
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  text-transform: uppercase;
+  background-color: $pink-app;
+  color: white;
+  margin-top: 10px;
+}
