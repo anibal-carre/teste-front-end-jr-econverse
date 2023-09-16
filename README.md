@@ -15,13 +15,13 @@ Siga estas etapas para instalar e configurar o projeto em sua máquina local:
 
 2.Navegue até o diretório do projeto:
 
-```bash
+
 cd nome-do-repositorio
 
 
 3.Instale as dependências do projeto usando o npm:
 
-```bash
+
 npm install
 
 
@@ -29,7 +29,7 @@ npm install
 
 Após a instalação das dependências, você pode executar o projeto localmente. Use o seguinte comando:
 
-```bash
+
 npm start
 
 //------------------------------------------------------------------------------------------------
